@@ -10,8 +10,9 @@ Write your code in this editor and press "Run" button to compile and execute it.
 int main(){
     int A=0,B=0,C=0,d=0;
     char a[]="AABBBCCCCddd";
+    int n=sizeof(a);
     int i;
-    for(i=0;i<12;i++){
+    for(i=0;i<n;i++){
         if(a[i]=='A')
         A++;
         else if(a[i]=='B')
