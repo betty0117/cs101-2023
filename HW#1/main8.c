@@ -1,28 +1,32 @@
 #include <stdio.h>
-#include <string.h>
 
-
-int main() 
+int main()
 {
-   
-	char a[] = "Hello";
-
-	int i, j, temp;
-	int len=5;
-	for (i = 0; i < len; i++){         
-		for (j = 0; j < len - i; j++)  
-			if (a[j] < a[j + 1])       
-			{
-				temp = a[j];
-				a[j] = a[j + 1];
-				a[j + 1] = temp;
-			}
-			
-	}
-	a[0]=a[0]-32;
-	a[len-1]=a[len-1]+32;
-        printf("a=Hello\n");
-		printf("a=%s ", a);
-		
-	return 0;
+    char a[] = "Hello";    
+    int i;
+    int len = sizeof(a)/sizeof(a[0])-1;
+    int oz[len];
+    int word[len];
+    
+    for(i = 0;i<len;i++){
+        if(a[i]>='A' && a[i]<='Z'){
+            oz[i] = 1;
+            word[i] = a[i]-'A';
+        }
+        else{
+            oz[i] = 0;
+            word[i] = a[i]-'a';
+        }
+    }
+    
+    for(i = len-1;i>=0;i--){
+        if(oz[len - i-1] == 1){
+            printf("%c", 'A' + word[i]);
+        }
+        else{
+            printf("%c", 'a' + word[i]);
+        }
+        
+    }
+    return 0;
 }
