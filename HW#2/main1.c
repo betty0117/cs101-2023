@@ -24,17 +24,17 @@ int fwriteforma(int i) {
 }
 
 int rand_num_mod70(int lotto_array) {
-    lotto_array = rand() % 69;
+    lotto_array = rand() % 70;
     while(lotto_array == 0) { 
-        lotto_array = rand() % 69;
+        lotto_array = rand() % 70;
     } 
     return lotto_array;
 }
 
 int rand_num_mod11(int lotto_array) {
-    lotto_array = rand() % 10;
+    lotto_array = rand() % 11;
     while(lotto_array == 0) { 
-        lotto_array = rand() % 10;
+        lotto_array = rand() % 11;
     } 
     return lotto_array;
 }
