@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#define N 25 // 最多的盤子 
+#define N 25 
 
 int c=0; // counter
 time_t t;
