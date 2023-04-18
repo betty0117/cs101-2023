@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-typedef struct my_me{
-	int a[10];
-} my_me_t;
-
-my_me_t ms;
-
 int g_mem[10]={0};
+
+typedef struct my_mm{
+	int a[10];
+} my_mm_t;
+
+my_mm_t ms;
+
+
 
 int* my_calloc(int n, int size){
 	int i,j;
@@ -45,6 +47,7 @@ int* my_calloc(int n, int size){
 	else
 		return NULL;
 }
+
 void my_free(int *p){
 	int *q;
 	int n=*p;
